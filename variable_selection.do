@@ -169,11 +169,6 @@ drop any_missing
 
 
 
-*** drop variables that are not needed for later analysis
-drop earnx1_1-earnx9_4 emplx1_1-emplx9_4
-
-
-
 ***	generate dummies
 gen age_under_40 = 1 if inrange(age,30,39)
 replace age_under_40 = 1 if inrange(age,40,50)
@@ -181,12 +176,12 @@ label var age_under_40 "1 if individual is younger than 40"
 
 
 gen olf_more_than_one_year = 1 if inrange(olf_x0,13,80)
-replace gen olf_more_than_one_year = 1 if inrange(olf_x0,0,12)
+replace olf_more_than_one_year = 1 if inrange(olf_x0,0,12)
 
 
 
 ***	draw small random sample
-sample 20
+sample 50
 
 
 
