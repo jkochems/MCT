@@ -24,8 +24,8 @@ indata = 'north_cleaned_selected'
 
 d_name = ['ptype']          # Treatment
 y_name = ['emplx_cum_30']          # List of outcome variables
-x_name_ord = ['age', 'earn_x0', 'unem_x0', 'em_x0', 'olf_x0']
-x_name_unord = ['nation', 'sex', 'school_use', 'voc_deg', 'region']
+x_name_ord = ['age', 'earn_x0', 'unem_x0', 'em_x0', 'olf_x0', 'shp_cw_1', 'shp_cw_2', 'shp_cw_3', 'shp_cw_4', 'reg_al', 'reg_prg', 'reg_ser', 'reg_pro', 'reg_agri', 'sect_al', 'prof_al', 'prof_xl']
+x_name_unord = ['nation', 'sex', 'school_use', 'voc_deg', 'region', 'lmp_cw', 'specia_c']
 z_name_split_unord = ['school_use', 'voc_deg']
 # x_name_ord = ['cont0', 'cont1']
 # x_name_unord = ['cat1']
