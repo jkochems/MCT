@@ -18,15 +18,15 @@ Created on Sat Sep 11 12:14:13 2021
 
 from mcf import mcf_functions
 
-outpfad = 'C:/Studium/Economics M.Res Mannheim/Summer Courses/Causal Machine Learning/Case study MA 2021/north/Results'
-datpfad = 'C:/Studium/Economics M.Res Mannheim/Summer Courses/Causal Machine Learning/Case study MA 2021/north/Lasso'
+outpfad = 'D:/Studium/Economics M.Res Mannheim/Summer Courses/Causal Machine Learning/Case study MA 2021/north/Results'
+datpfad = 'D:/Studium/Economics M.Res Mannheim/Summer Courses/Causal Machine Learning/Case study MA 2021/north/Lasso'
 indata = 'north_cleaned_selected'
 
 d_name = ['ptype']          # Treatment
 y_name = ['emplx_cum_30']          # List of outcome variables
-x_name_ord = ['age']
-x_name_unord = ['nation']
-z_name_split_unord = ['nation']
+x_name_ord = ['age', 'earn_x0', 'unem_x0', 'em_x0', 'olf_x0']
+x_name_unord = ['nation', 'sex', 'school_use', 'voc_deg', 'region']
+z_name_split_unord = ['school_use', 'voc_deg']
 # x_name_ord = ['cont0', 'cont1']
 # x_name_unord = ['cat1']
 # z_name_list = ['cont0', 'cat1']

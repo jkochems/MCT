@@ -10,7 +10,7 @@ set seed 12345
 
 
 *	load dataset
-global data "C:\Studium\Economics M.Res Mannheim\Summer Courses\Causal Machine Learning\Case study MA 2021\north"
+global data "D:\Studium\Economics M.Res Mannheim\Summer Courses\Causal Machine Learning\Case study MA 2021\north"
 import delimited "$data\Output\north_cleaned.csv", clear
 save "$data\Lasso\north_cleaned.dta", replace
 use "$data\Lasso\north_cleaned.dta", clear
@@ -178,6 +178,10 @@ drop earnx1_1-earnx9_4 emplx1_1-emplx9_4
 gen age_under_40 = 1 if inrange(age,30,39)
 replace age_under_40 = 1 if inrange(age,40,50)
 label var age_under_40 "1 if individual is younger than 40"
+
+
+gen olf_more_than_one_year = 1 if inrange(olf_x0,13,80)
+replace gen olf_more_than_one_year = 1 if inrange(olf_x0,0,12)
 
 
 
