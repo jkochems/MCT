@@ -10,7 +10,7 @@ set seed 12345
 
 
 *	load dataset
-global data "D:\Studium\Economics M.Res Mannheim\Summer Courses\Causal Machine Learning\Case study MA 2021\north"
+global data "C:\Studium\Economics M.Res Mannheim\Summer Courses\Causal Machine Learning\Case study MA 2021\north"
 import delimited "$data\Output\north_cleaned.csv", clear
 save "$data\Lasso\north_cleaned.dta", replace
 use "$data\Lasso\north_cleaned.dta", clear
@@ -136,7 +136,7 @@ label var not_yet_treated "1 if variable is chosen for not yet treated group"
 set scheme plotplain
 hist selection_criterion, color(gray) title("Selection: {it:not yet treated}") ///
 	start(-12) width(0.5) ///
-	xtitle("difference between predicted elapased time until treatment" "and last unemployment spell before treatment (in quarters)")
+	xtitle("difference between predicted elapsed time until treatment" "and last unemployment spell before treatment (in quarters)")
 forval i=1/18{
       gr_edit .plotregion1.plot1.EditCustomStyle , j(`i') style(area(shadestyle(color(red))))
 }
@@ -178,6 +178,11 @@ drop earnx1_1-earnx9_4 emplx1_1-emplx9_4
 gen age_under_40 = 1 if inrange(age,30,39)
 replace age_under_40 = 1 if inrange(age,40,50)
 label var age_under_40 "1 if individual is younger than 40"
+
+
+
+***	draw small random sample
+sample 20
 
 
 

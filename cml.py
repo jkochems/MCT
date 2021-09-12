@@ -18,14 +18,14 @@ Created on Sat Sep 11 12:14:13 2021
 
 from mcf import mcf_functions
 
-outpfad = 'D:/Studium/Economics M.Res Mannheim/Summer Courses/Causal Machine Learning/Case study MA 2021/north/Results'
-datpfad = 'D:/Studium/Economics M.Res Mannheim/Summer Courses/Causal Machine Learning/Case study MA 2021/north/Lasso'
+outpfad = 'C:/Studium/Economics M.Res Mannheim/Summer Courses/Causal Machine Learning/Case study MA 2021/north/Results'
+datpfad = 'C:/Studium/Economics M.Res Mannheim/Summer Courses/Causal Machine Learning/Case study MA 2021/north/Lasso'
 indata = 'north_cleaned_selected'
 
 d_name = ['ptype']          # Treatment
 y_name = ['emplx_cum_30']          # List of outcome variables
-x_name_ord = []
-x_name_unord = ['nation', 'age_under_40']
+x_name_ord = ['age']
+x_name_unord = ['nation']
 z_name_split_unord = ['nation']
 # x_name_ord = ['cont0', 'cont1']
 # x_name_unord = ['cat1']
@@ -49,4 +49,4 @@ if __name__ == '__main__':
         mp_with_ray=mp_with_ray,
         mp_parallel=mp_parallel,
         stop_empty = 5,
-        boot=50)   
+        boot=1000)   
